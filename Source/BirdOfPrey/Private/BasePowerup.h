@@ -7,6 +7,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Sound/SoundCue.h"
 #include "Particles/ParticleSystem.h"
+#include "PlayerShip.h"
 #include "BasePowerup.generated.h"
 
 UCLASS()
@@ -25,6 +26,14 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void Apply(APlayerShip* playerShip);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void PlayEffects();
+
+
 private:
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
 	UStaticMeshComponent* mesh;

@@ -25,3 +25,11 @@ void ABasePowerup::Tick(float DeltaTime)
 
 }
 
+void ABasePowerup::Apply(APlayerShip* playerShip)
+{
+}
+
+void ABasePowerup::PlayEffects()
+{
+}
+
