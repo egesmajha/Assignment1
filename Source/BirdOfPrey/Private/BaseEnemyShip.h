@@ -8,7 +8,7 @@
 #include "BaseEnemyShip.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class ABaseEnemyShip : public ABaseShip
@@ -16,6 +16,6 @@ class ABaseEnemyShip : public ABaseShip
 	GENERATED_BODY()
 private:
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	ABaseAIController* ShipAIController;
-	
+	ABaseAIController* shipAIController;
+
 };

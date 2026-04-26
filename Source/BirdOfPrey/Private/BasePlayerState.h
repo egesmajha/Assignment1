@@ -7,21 +7,21 @@
 #include "BasePlayerState.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class ABasePlayerState : public APlayerState
 {
 	GENERATED_BODY()
 private:
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	float PlayerScore = 0.0f;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	float playerScore = 0.0f;
 
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	int32 RemainingLives = 0;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	int32 remainingLives = 0;
 
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	float TimeOfLastDeath = 0.0f;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	float timeOfLastDeath = 0.0f;
 
-	
+
 };

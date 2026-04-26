@@ -20,20 +20,20 @@ class AProjectileWeapon : public ABaseWeapon
 private:
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<ABaseProjectile> ProjectileType;
+	TSubclassOf<ABaseProjectile> projectileType;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey", meta = (AllowPrivateAccess = "true"))
-	float RefireTime = 0.0f;
+	float refireTime = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey", meta = (AllowPrivateAccess = "true"))
-	float LastFireTime = 0.0f;
+	float lastFireTime = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey", meta = (AllowPrivateAccess = "true"))
-	int32 NumShots = 0;
+	int32 numShots = 0;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey", meta = (AllowPrivateAccess = "true"))
 	bool bIsFiring = false;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey", meta = (AllowPrivateAccess = "true"))
-	float DesiredZ = 0.0f;
+	float desiredZ = 0.0f;
 };

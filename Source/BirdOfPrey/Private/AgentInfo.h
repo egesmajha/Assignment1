@@ -16,29 +16,29 @@ struct BIRDOFPREY_API FSAgentInfo
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	FText Name;
+	FText name;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	TSubclassOf<ABaseWeapon> WeaponType;
+	TSubclassOf<ABaseWeapon> weaponType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	USkeletalMesh* SkeletalMesh;
+	USkeletalMesh* skeletalMesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	TSubclassOf<UAnimInstance> AnimInstance;
+	TSubclassOf<UAnimInstance> animInstance;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	UTexture2D* Image;
+	UTexture2D* image;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	float Speed = 0.0f;
+	float speed = 0.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	float Health = 0.0f;
+	float health = 0.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	float MeshScale = 1.0f;
+	float meshScale = 1.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	FLinearColor Colour;
+	FLinearColor colour;
 };

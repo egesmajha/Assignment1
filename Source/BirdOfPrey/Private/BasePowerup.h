@@ -13,8 +13,8 @@ UCLASS()
 class ABasePowerup : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ABasePowerup();
 
@@ -22,16 +22,16 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 private:
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	UStaticMeshComponent* Mesh;
+	UStaticMeshComponent* mesh;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	USoundCue* PickUpSoundCue;
+	USoundCue* pickUpSoundCue;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	UParticleSystem* PickUpParticleSystem;
+	UParticleSystem* pickUpParticleSystem;
 };

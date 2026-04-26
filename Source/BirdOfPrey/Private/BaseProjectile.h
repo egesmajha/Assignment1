@@ -16,8 +16,8 @@ UCLASS()
 class ABaseProjectile : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ABaseProjectile();
 
@@ -25,40 +25,40 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 private:
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	UProjectileMovementComponent* ProjectileMovement;
+	UProjectileMovementComponent* projectileMovement;
 
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	UCapsuleComponent* Capsule;
+	UCapsuleComponent* capsule;
 
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	UStaticMeshComponent* Mesh;
+	UStaticMeshComponent* mesh;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float ProjectileSpeed = 0.0f;
+	float projectileSpeed = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float Damage = 0.0f;
+	float damage = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	UParticleSystem* DetonationEmitter;
+	UParticleSystem* detonationEmitter;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float GroundUnitCheckDistance = 0.0f;
+	float groundUnitCheckDistance = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float GroundUnitCheckAngle = 0.0f;
+	float groundUnitCheckAngle = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	ABaseGameAgent* GroundTarget;
+	ABaseGameAgent* groundTarget;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float DesiredZ = 0.0f;
+	float desiredZ = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	USoundBase* ImpactSound;
+	USoundBase* impactSound;
 };

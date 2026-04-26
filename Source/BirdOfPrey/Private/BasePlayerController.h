@@ -7,15 +7,15 @@
 #include "BasePlayerController.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class ABasePlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
-	private:
+private:
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	bool bDiedWhileFiring = false;
-	
+
 };

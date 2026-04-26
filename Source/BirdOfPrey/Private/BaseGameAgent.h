@@ -24,17 +24,17 @@ public:
 	ABaseGameAgent();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	FSAgentInfo AgentInfo;
+	FSAgentInfo agentInfo;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	float Points;
+	float points;
 
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -42,55 +42,55 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	float MoveSpeed;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	float moveSpeed;
 
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	ABaseWeapon* Weapon;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	ABaseWeapon* weapon;
 
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	TSubclassOf<ABaseWeapon> DefaultWeaponType;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	TSubclassOf<ABaseWeapon> defaultWeaponType;
 
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	float Health;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	float health;
 
-	
+
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	bool bCheckForOutOfBounds;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float OutOfBoundsCheckTolerance;
+	float outOfBoundsCheckTolerance;
 
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	FName WeaponSocketName;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	FName weaponSocketName;
 
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	EAttachmentRule WeaponAttachRule;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	EAttachmentRule weaponAttachRule;
 
-	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
-	FVector TargetLocation;
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	FVector targetLocation;
 
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	USkeletalMeshComponent* SkeletalMesh;
+	USkeletalMeshComponent* skeletalMesh;
 
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	UCapsuleComponent* Capsule;
+	UCapsuleComponent* capsule;
 
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	USceneComponent* WeaponSpawnOffset;
+	USceneComponent* weaponSpawnOffset;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	UParticleSystem* DeathParticleEffect;
+	UParticleSystem* deathParticleEffect;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	USoundCue* DeathSoundCue;
+	USoundCue* deathSoundCue;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	USoundCue* HitSoundCue;
+	USoundCue* hitSoundCue;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	UParticleSystem* HitParticleEffect;
+	UParticleSystem* hitParticleEffect;
 
 
 };

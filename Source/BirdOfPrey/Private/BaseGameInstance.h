@@ -10,7 +10,7 @@
 
 
 /**
- * 
+ *
  */
 UCLASS()
 class UBaseGameInstance : public UGameInstance
@@ -20,12 +20,8 @@ class UBaseGameInstance : public UGameInstance
 public:
 
     UPROPERTY(BlueprintReadWrite, Category = "BirdOfPrey")
-    TArray<FSAgentInfo> PlayerAgentInfo;
+    TArray<FSAgentInfo> playerAgentInfo;
 
-    UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
-    void SetPlayerAgentInfoFor(int PlayerControllerID, FSAgentInfo& info);
 
-    UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
-    FSAgentInfo& GetPlayerAgentInfoFor(int PlayerControllerID, bool &Result);
-	
+
 };

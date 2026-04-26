@@ -9,7 +9,7 @@
 #include "BaseAIController.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class ABaseAIController : public AAIController
@@ -17,20 +17,20 @@ class ABaseAIController : public AAIController
 	GENERATED_BODY()
 private:
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float LastFireTime = 0.0f;
+	float lastFireTime = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	bool bIsFiring = false;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float RefireDelay = 0.0f;
+	float refireDelay = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	bool bShouldUpdateAim = false;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	ABasePlayerController* Target;
+	ABasePlayerController* target;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	ABaseGameAgent* ControlledAgent;
+	ABaseGameAgent* controlledAgent;
 };

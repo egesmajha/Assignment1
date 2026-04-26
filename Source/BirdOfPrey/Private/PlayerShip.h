@@ -10,7 +10,7 @@
 #include "PlayerShip.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class APlayerShip : public ABaseShip
@@ -18,14 +18,14 @@ class APlayerShip : public ABaseShip
 	GENERATED_BODY()
 private:
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	UPointLightComponent* PointLight;
+	UPointLightComponent* pointLight;
 
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
-	UAudioComponent* HoverAudio;
+	UAudioComponent* hoverAudio;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	ABasePlayerController* BasePlayerController;
+	ABasePlayerController* basePlayerController;
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
-	float InvulnerabilityTime = 0.0f;
+	float invulnerabilityTime = 0.0f;
 };
