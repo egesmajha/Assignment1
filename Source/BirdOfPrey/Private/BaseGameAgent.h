@@ -41,6 +41,48 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void ChangeWeaponType(TSubclassOf<ABaseWeapon> newWeaponType);
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	FTransform GetWeaponSpawnTransform() const;
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void SpawnDefaultWeapon();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void StartFire();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void StopFire();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	float TakeDamage(float damage, float& actualDamage);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	bool IsAlive() const;
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void Died(AController* killer);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void PlayHitEffects();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void CleanUp();	
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void ApplyAgentInfo(FSAgentInfo newAgentInfo);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void AimAt(FVector aimTarget);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void PlayDeathEffects();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void CheckForOutOfBounds();
+
 private:
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	float moveSpeed;
