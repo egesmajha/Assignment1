@@ -72,7 +72,7 @@ public:
 	void EndGame(bool success);
 
 	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
-	ABaseGameAgent* SpawnEnemyFrom(const TArray<TSubclassOf<ABaseGameAgent>>& classList) const;
+	void SpawnEnemyFrom(const TArray<TSubclassOf<ABaseGameAgent>>& classList) const;
 
 	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
 	void ResetGame();

@@ -29,9 +29,9 @@ void ABaseGameMode::EndGame(bool success)
 {
 }
 
-ABaseGameAgent* ABaseGameMode::SpawnEnemyFrom(const TArray<TSubclassOf<ABaseGameAgent>>& classList) const
+void ABaseGameMode::SpawnEnemyFrom(const TArray<TSubclassOf<ABaseGameAgent>>& classList) const
 {
-    return nullptr;
+    
 }
 
 void ABaseGameMode::ResetGame()
