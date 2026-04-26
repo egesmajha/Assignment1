@@ -14,6 +14,11 @@ UCLASS()
 class ABaseEnemyShip : public ABaseShip
 {
 	GENERATED_BODY()
+public:
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void Move();
+
+
 private:
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	ABaseAIController* shipAIController;

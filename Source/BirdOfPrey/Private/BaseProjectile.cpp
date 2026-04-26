@@ -25,3 +25,42 @@ void ABaseProjectile::Tick(float DeltaTime)
 
 }
 
+void ABaseProjectile::InitialseProjectile(FVector direction, float speed)
+{
+}
+
+void ABaseProjectile::DealDamageTo(AActor* damaging, float Amountdamage)
+{
+}
+
+void ABaseProjectile::OnHit(UPrimitiveComponent* overlappedComponent, AActor* otherActor)
+{
+}
+
+ECollisionChannel ABaseProjectile::GetInstigatorCollisionChannel()
+{
+	return ECC_WorldStatic;
+}
+
+void ABaseProjectile::CheckForGroundUnitTarget()
+{
+}
+
+bool ABaseProjectile::ShouldCheckForGroundTarget()
+{
+	return false;
+}
+
+void ABaseProjectile::AdjustToTarget()
+{
+}
+
+bool ABaseProjectile::IsEnemyProjectile()
+{
+	return false;
+}
+
+void ABaseProjectile::AdjustToDesiredZ()
+{
+}
+

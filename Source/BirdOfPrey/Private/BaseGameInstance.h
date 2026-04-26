@@ -22,6 +22,11 @@ public:
     UPROPERTY(BlueprintReadWrite, Category = "BirdOfPrey")
     TArray<FSAgentInfo> playerAgentInfo;
 
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void SetPlayerAgentInfoFor(int32 playerControllerID, FSAgentInfo agentInfo);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	FSAgentInfo GetPlayerAgentInfoFor(int32 playerControllerID, bool& success);
 
 
 };

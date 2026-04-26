@@ -28,8 +28,38 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void InitialseProjectile(FVector direction, float speed);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void DealDamageTo(AActor* damaging, float damageAmount);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void OnHit(UPrimitiveComponent* overlappedComponent, AActor* otherActor);
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	ECollisionChannel GetInstigatorCollisionChannel();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void CheckForGroundUnitTarget();
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	bool ShouldCheckForGroundTarget() ;
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void AdjustToTarget();
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	bool IsEnemyProjectile();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void AdjustToDesiredZ();
+
+
+
 private:
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
+
 	UProjectileMovementComponent* projectileMovement;
 
 	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
