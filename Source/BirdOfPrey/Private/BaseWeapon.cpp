@@ -25,3 +25,31 @@ void ABaseWeapon::Tick(float DeltaTime)
 
 }
 
+void ABaseWeapon::StartFire()
+{
+}
+
+void ABaseWeapon::StopFire()
+{
+}
+
+void ABaseWeapon::PlayFireEffects()
+{
+}
+
+FTransform ABaseWeapon::GetFireEffectSpawnTransform() const
+{
+	return FTransform();
+}
+
+bool ABaseWeapon::HasFinishedFiring()
+{
+	return false;
+}
+
+bool ABaseWeapon::IsFiring() const
+{
+	return false;
+}
+
+

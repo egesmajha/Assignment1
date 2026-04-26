@@ -31,6 +31,6 @@ public:
 	void ConsumeLife();
 	
 	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
-	bool HasReamainingLives();
+	bool HasRemainingLives();
 
 };

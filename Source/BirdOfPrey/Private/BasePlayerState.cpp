@@ -11,7 +11,7 @@ void ABasePlayerState::ConsumeLife()
 {
 }
 
-bool ABasePlayerState::HasReamainingLives()
+bool ABasePlayerState::HasRemainingLives()
 {
 	return false;
 }

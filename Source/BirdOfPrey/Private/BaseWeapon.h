@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Particles/ParticleSystem.h"
+#include "Sound/SoundCue.h"
 #include "BaseWeapon.generated.h"
 
 UCLASS()
@@ -23,4 +25,34 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void StartFire();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void StopFire();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void PlayFireEffects();
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	FTransform GetFireEffectSpawnTransform() const;
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	bool HasFinishedFiring() ;
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	bool IsFiring() const; 
+
+private:
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	UParticleSystem* fireParticleEffect;
+
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	USoundCue* fireSoundCue;
+
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	bool bRequiresAimForAI = false;
+
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	bool bIsAutomatic = false;
 };
