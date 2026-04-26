@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/StaticMeshComponent.h"
+#include "Sound/SoundCue.h"
+#include "Particles/ParticleSystem.h"
 #include "BasePowerup.generated.h"
 
 UCLASS()
@@ -22,5 +25,13 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+private:
+	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
+	UStaticMeshComponent* Mesh;
 
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	USoundCue* PickUpSoundCue;
+
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	UParticleSystem* PickUpParticleSystem;
 };
