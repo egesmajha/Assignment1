@@ -4,29 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "AgentInfo.h"
 #include "BaseGameInstance.generated.h"
 
-USTRUCT(BlueprintType)
-struct FSAgentInfo
-{
-    GENERATED_BODY()
 
-public:
-    UPROPERTY(BlueprintReadWrite, Category = "BirdOfPrey")
-    FText Name;
-
-    UPROPERTY(BlueprintReadWrite, Category = "BirdOfPrey")
-    TSubclassOf<AActor> BaseWeaponType;
-
-    UPROPERTY(BlueprintReadWrite, Category = "BirdOfPrey")
-    USkeletalMesh* SkeletalMesh;
-
-    UPROPERTY(BlueprintReadWrite, Category = "BirdOfPrey")
-    UAnimInstance* AnimInstance;
-
-    UPROPERTY(BlueprintReadWrite, Category = "BirdOfPrey")
-    UTexture2D* Image;    
-};
 
 /**
  * 

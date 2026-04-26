@@ -5,7 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Engine/EngineTypes.h"
-#include 
+#include "AgentInfo.h"
+#include "BaseWeapon.h"
 #include "BaseGameAgent.generated.h"
 
 UCLASS()
@@ -18,7 +19,7 @@ public:
 	ABaseGameAgent();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	FSAgentInfo* AgentInfo;
+	FSAgentInfo AgentInfo;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
 	float Points;
@@ -36,32 +37,34 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
 	float MoveSpeed;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
 	ABaseWeapon* Weapon;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
 	TSubclassOf<ABaseWeapon> DefaultWeaponType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
 	float Health;
 
+	
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	bool bCheckForOutOfBounds;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	float OutOfBoundsCheckTolerance;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
 	FName WeaponSocketName;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
 	EAttachmentRule WeaponAttachRule;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
+	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
 	FVector TargetLocation;
+
 
 };

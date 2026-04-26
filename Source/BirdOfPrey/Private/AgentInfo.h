@@ -3,9 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "BaseWeapon.h"
 #include "Engine/Texture2D.h"
 #include "Animation/AnimInstance.h"
+#include "BaseWeapon.h"
 #include "AgentInfo.generated.h"
 
 USTRUCT(BlueprintType)
@@ -40,5 +40,5 @@ public:
 	float MeshScale = 1.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
-	FLinearColor Colour = FLinearColor::White;
+	FLinearColor Colour;
 };
