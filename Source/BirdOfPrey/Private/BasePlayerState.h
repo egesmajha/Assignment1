@@ -23,5 +23,14 @@ private:
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	float timeOfLastDeath = 0.0f;
 
+public:
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void AddScore(float amount);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void ConsumeLife();
+	
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	bool HasReamainingLives();
 
 };
