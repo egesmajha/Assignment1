@@ -7,6 +7,11 @@
 #include "Engine/EngineTypes.h"
 #include "AgentInfo.h"
 #include "BaseWeapon.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "Particles/ParticleSystem.h"
+#include "Sound/SoundCue.h"
+#include "Components/SceneComponent.h"
 #include "BaseGameAgent.generated.h"
 
 UCLASS()
@@ -65,6 +70,27 @@ private:
 
 	UPROPERTY(EditAnywhere,  Category = "BirdOfPrey")
 	FVector TargetLocation;
+
+	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
+	USkeletalMeshComponent* SkeletalMesh;
+
+	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
+	UCapsuleComponent* Capsule;
+
+	UPROPERTY(VisibleAnywhere, Category = "BirdOfPrey")
+	USceneComponent* WeaponSpawnOffset;
+
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	UParticleSystem* DeathParticleEffect;
+
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	USoundCue* DeathSoundCue;
+
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	USoundCue* HitSoundCue;
+
+	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
+	UParticleSystem* HitParticleEffect;
 
 
 };
