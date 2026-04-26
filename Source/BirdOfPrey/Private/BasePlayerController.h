@@ -19,7 +19,10 @@ private:
 	bool bDiedWhileFiring = false;
 
 public:
+
 	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
 	void CalcScreenDimesions();
 
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void OnPlayerDeath(AController* killer);
 };

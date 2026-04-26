@@ -6,3 +6,7 @@
 void ABasePlayerController::CalcScreenDimesions()
 {
 }
+
+void ABasePlayerController::OnPlayerDeath(AController* killer)
+{
+}
