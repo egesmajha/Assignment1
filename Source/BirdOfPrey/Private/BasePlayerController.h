@@ -18,4 +18,8 @@ private:
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	bool bDiedWhileFiring = false;
 
+public:
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void CalcScreenDimesions();
+
 };

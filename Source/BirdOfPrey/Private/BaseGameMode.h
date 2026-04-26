@@ -8,6 +8,7 @@
 #include "TimerManager.h"
 #include "WorldCamera.h"
 #include "BasePowerup.h"
+#include "BaseGameAgent.h"
 #include "BaseGameMode.generated.h"
 
 /**
@@ -26,8 +27,6 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	AWorldCamera* worldCameraActor;
-
-
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	float respawnDelay = 0.0f;
@@ -53,4 +52,37 @@ private:
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BirdOfPrey")
 	UDataTable* playerAgentInfoTable;
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	FVector GetWorldScrolVelocity();
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	AWorldCamera* GetWorldCameraActor();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void OnPlayerDied();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void OnEnemyDied(ABaseGameAgent* enemy, AController* killer);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void StartGame();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void EndGame(bool success);
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	ABaseGameAgent* SpawnEnemyFrom(const TArray<TSubclassOf<ABaseGameAgent>>& classList) const;
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void ResetGame();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void RespawnPlayer();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void TrySpawnPowerUp(FVector location);
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	float GetDistanceTravelled();
 };

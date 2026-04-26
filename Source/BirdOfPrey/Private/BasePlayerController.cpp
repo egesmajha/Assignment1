@@ -3,3 +3,6 @@
 
 #include "BasePlayerController.h"
 
+void ABasePlayerController::CalcScreenDimesions()
+{
+}
