@@ -17,6 +17,17 @@ class AProjectileWeapon : public ABaseWeapon
 {
 	GENERATED_BODY()
 
+public:
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	ABaseProjectile* SpawnProjectile(FTransform spawnTransform);
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	FTransform GetProjectileSpawnTarnsform(int32 shotNumber) const;
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	bool ReadyToFire() const;
+
 private:
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey", meta = (AllowPrivateAccess = "true"))
