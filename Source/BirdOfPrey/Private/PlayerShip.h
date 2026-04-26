@@ -28,4 +28,31 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "BirdOfPrey")
 	float invulnerabilityTime = 0.0f;
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void GetShipConstantVelocity(FVector& direction, float& speed) const;
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void ClampToCamerBounds();
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	float GetShipAxisAdjustment(float dist, float max);
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	FVector CalcOutOfBoundsAdjustment();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void  GetPlayerAgentInfo(APlayerController* playerController);
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	bool ShouldSpawnAIController();
+
+	UFUNCTION(BlueprintCallable, Category = "BirdOfPrey")
+	void UpdateHoverPitch();
+
+	UFUNCTION(BlueprintPure, Category = "BirdOfPrey")
+	bool HasDiedRecently();
+
+
 };
